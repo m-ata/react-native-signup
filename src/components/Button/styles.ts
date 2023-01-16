@@ -1,11 +1,12 @@
-import {StyleSheet, TextStyle} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {colors} from '../../utils/colors';
 
-const buttonCommons = {
+const textCommons = {
   fontSize: 18,
   fontWeight: '700',
   textAlign: 'center',
-} as TextStyle;
+  flexGrow: 1,
+} as const;
 
 export const buttonStyles = StyleSheet.create({
   button_primary: {
@@ -15,8 +16,15 @@ export const buttonStyles = StyleSheet.create({
   },
   button_secondary: {},
   text_primary: {
-    ...buttonCommons,
+    ...textCommons,
     color: colors.white,
   },
-  text_secondary: {...buttonCommons, color: colors.royalBlue},
+  text_secondary: {...textCommons, color: colors.royalBlue},
+  contentContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 5,
+  },
 });
