@@ -11,6 +11,7 @@ import {inputFieldStyles} from './styles';
 interface IProps {
   label?: string;
   placeHolder?: string;
+  isPassword?: boolean;
   value?: string;
   onChange?: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
 }
@@ -20,11 +21,13 @@ export const InputField: FC<IProps> = ({
   onChange,
   placeHolder,
   value,
+  isPassword = false,
 }) => {
   return (
     <View style={inputFieldStyles.container}>
       <Text style={inputFieldStyles.label}>{label}</Text>
       <TextInput
+        secureTextEntry={isPassword}
         style={inputFieldStyles.field}
         placeholder={placeHolder}
         value={value}
