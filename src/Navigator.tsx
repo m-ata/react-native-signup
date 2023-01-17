@@ -5,6 +5,7 @@ import {LandingScreen} from './screens/LandingScreen/LandingScreen';
 import {navRoutes} from './utils/constants';
 import {PhoneNumberScreen} from './screens/PhoneNumberScreen/PhoneNumberScreen';
 import {NameInputScreen} from './screens/NameInputScreen/NameInputScreen';
+import {PasswordInputScreen} from './screens/PasswordInputScreen/PasswordInputScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +27,11 @@ export const Navigator = () => {
           options={{headerShown: false}}
           name={navRoutes.nameInput}
           component={NameInputScreen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={navRoutes.passwordInput}
+          component={PasswordInputScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
