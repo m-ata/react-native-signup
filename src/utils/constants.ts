@@ -4,4 +4,5 @@ export const navRoutes = {
   verifyPhone: 'verify_phone',
   nameInput: 'name_input',
   passwordInput: 'password_input',
+  contactsList: 'contacts_list',
 } as const;

@@ -7,6 +7,7 @@ import {PhoneNumberScreen} from './screens/PhoneNumberScreen/PhoneNumberScreen';
 import {NameInputScreen} from './screens/NameInputScreen/NameInputScreen';
 import {PasswordInputScreen} from './screens/PasswordInputScreen/PasswordInputScreen';
 import {VerifyPhoneScreen} from './screens/VerifyPhoneScreen/VerifyPhoneScreen';
+import {ContactsList} from './screens/ContactsList/ContactsList';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,11 @@ export const Navigator = () => {
           options={{headerShown: false}}
           name={navRoutes.passwordInput}
           component={PasswordInputScreen}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name={navRoutes.contactsList}
+          component={ContactsList}
         />
       </Stack.Navigator>
     </NavigationContainer>
