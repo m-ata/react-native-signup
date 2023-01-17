@@ -6,6 +6,7 @@ export const inputFieldStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 5,
+    flexGrow: 1,
   },
   label: {
     fontWeight: '700',

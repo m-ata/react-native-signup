@@ -27,4 +27,7 @@ export const buttonStyles = StyleSheet.create({
     alignItems: 'center',
     gap: 5,
   },
+  disabled: {
+    backgroundColor: colors.alto,
+  },
 });
