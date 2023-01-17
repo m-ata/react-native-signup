@@ -16,6 +16,7 @@ interface IProps {
   width?: number;
   margin?: number;
   icon?: ImageSourcePropType;
+  disabled?: boolean;
 }
 
 export const Button: FC<IProps> = ({
@@ -25,11 +26,15 @@ export const Button: FC<IProps> = ({
   width,
   margin = 20,
   icon,
+  disabled = false,
 }) => {
+  const buttonStyle = disabled
+    ? {...buttonStyles.button_primary, ...buttonStyles.disabled, width, margin}
+    : {...buttonStyles[`button_${variant}`], width, margin};
   return (
     <TouchableOpacity
-      onPress={onPress}
-      style={{...buttonStyles[`button_${variant}`], width, margin}}>
+      onPress={event => !disabled && onPress?.(event)}
+      style={buttonStyle}>
       <View style={buttonStyles.contentContainer}>
         {icon && <Image source={icon} />}
         {text && <Text style={buttonStyles[`text_${variant}`]}>{text}</Text>}

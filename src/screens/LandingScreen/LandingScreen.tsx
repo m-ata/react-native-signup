@@ -21,7 +21,7 @@ export const LandingScreen: FC<ScreenProps> = ({navigation}) => {
             <Button
               text="SIGN UP"
               variant="primary"
-              onPress={() => navigation.navigate(navRoutes.phoneNumber)}
+              onPress={() => navigation?.navigate(navRoutes.phoneNumber)}
             />
           </View>
         </SafeAreaView>

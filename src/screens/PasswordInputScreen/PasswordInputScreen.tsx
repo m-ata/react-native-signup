@@ -32,7 +32,7 @@ export const PasswordInputScreen: FC<ScreenProps> = ({navigation}) => {
       <Button
         text="Next"
         variant="primary"
-        onPress={() => navigation.navigate(navRoutes.phoneNumber)}
+        onPress={() => navigation?.navigate(navRoutes.phoneNumber)}
       />
     </SafeAreaView>
   );
