@@ -20,5 +20,7 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>info.plist</key>
+	<string>Privacy - Contacts Usage Description</string>
 </dict>
 </plist>
